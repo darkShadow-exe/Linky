@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LinkyAPI URL Vectorizer</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>LinkyAPI URL Vectorizer</h1>
+        <form id="urlForm">
+            <input type="url" id="urlInput" placeholder="Enter URL here" required />
+            <button type="submit">Predict</button>
+        </form>
+        <div id="resultContainer" class="hidden">
+            <h2>Result</h2>
+            <pre id="result"></pre>
+            <button id="clearResult">Clear Saved Result</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
