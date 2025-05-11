@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LinkyAPI URL Vectorizer</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Linky API Test</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h1>LinkyAPI URL Vectorizer</h1>
-        <form id="urlForm">
-            <input type="url" id="urlInput" placeholder="Enter URL here" required />
-            <button type="submit">Predict</button>
-        </form>
-        <div id="resultContainer" class="hidden">
-            <h2>Result</h2>
-            <pre id="result"></pre>
-            <button id="clearResult">Clear Saved Result</button>
-        </div>
-    </div>
-    <script src="scripts.js"></script>
+<body class="dark">
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Scanned Links</h2>
+      <ul id="savedResults"></ul>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <h1>Linky Scanner</h1>
+      </div>
+
+      <div class="scanner">
+        <input type="text" id="urlInput" placeholder="Enter website.com" />
+        <button id="scanBtn" onclick="checkLink()">Scan</button>
+        <div id="loadingBar" class="loading-bar hidden"></div>
+        <p id="result">Result will appear here.</p>
+        <button id="saveBtn" class="hidden">Save Result</button>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
