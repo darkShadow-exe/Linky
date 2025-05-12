@@ -5,8 +5,11 @@ Linky is a lightweight and easy-to-use phishing link detector built for quick an
 ## Features
 
 ✅ Detects phishing and malicious URLs
+
 ⚡ Fast and simple interface
+
 🧠 Uses Linear Regression to classify links
+
 🗂️ Can be integrated into other tools or workflows
 
 ## Usage
