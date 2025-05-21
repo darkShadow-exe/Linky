@@ -14,7 +14,7 @@ Linky is a lightweight and easy-to-use phishing link detector built for quick an
 
 ## Usage
 
-Visit the [webpage](https://darkshadow-exe.github.io/Linky/) to use a simpified demo, whose frontend is hosted on GitHub Pages and the model on [Hugging Face](https://huggingface.co/spaces/darkShadow-exe/LinkyAP)
+Visit the [webpage](https://darkshadow-exe.github.io/Linky/) to use a simpified demo, whose frontend is hosted on GitHub Pages and the model on [Hugging Face](https://huggingface.co/spaces/darkShadow-exe/LinkyAPI)
 
 ## Further Plans
 
