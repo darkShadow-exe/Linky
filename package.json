@@ -9,6 +9,5 @@
   "dependencies": {
     "@gradio/client": "^1.14.2",
     "vite": "^6.3.5"
-  },
-  "devDependencies": {}
+  }
 }

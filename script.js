@@ -38,6 +38,12 @@ async function checkLink() {
 
   if (!userInput) return alert("Please enter a URL.");
 
+  // Strip protocol, subdomain, and path
+  let url = userInput.replace(/^https?:\/\//, "");
+  url = url.replace(/^www\./, "");
+  url = url.split("/")[0];
+  url = url.split(":")[0]; 
+
   loadingBar.classList.remove("hidden");
   resultDisplay.textContent = "";
   saveBtn.classList.add("hidden");
@@ -45,11 +51,11 @@ async function checkLink() {
   try {
     const client = await Client.connect("darkShadow-exe/LinkyAPI");
     const result = await client.predict("/predict", {
-      user_url: userInput,
+      user_url: url,
     });
 
-    // Clean URL for output (remove http://, https:// and trailing /)
-    const simplifiedURL = userInput.replace(/^https?:\/\//, '').replace(/\/$/, '');
+    // Clean URL for output
+    const simplifiedURL = url;
 
     const output = result.data?.[0] ?? result.data;
 
