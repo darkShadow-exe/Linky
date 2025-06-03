@@ -38,11 +38,8 @@ async function checkLink() {
 
   if (!userInput) return alert("Please enter a URL.");
 
-  // Strip protocol, subdomain, and path
-  let url = userInput.replace(/^https?:\/\//, "");
-  url = url.replace(/^www\./, "");
-  url = url.split("/")[0];
-  url = url.split(":")[0]; 
+  // Strip protocol and www. from the URL for processing
+  let url = userInput.replace(/^https?:\/\//, "").replace(/^www\./, "");
 
   loadingBar.classList.remove("hidden");
   resultDisplay.textContent = "";
@@ -54,7 +51,7 @@ async function checkLink() {
       user_url: url,
     });
 
-    // Clean URL for output
+    // Clean URL for output (remove http://, https:// and www.)
     const simplifiedURL = url;
 
     const output = result.data?.[0] ?? result.data;
