@@ -1,5 +1,7 @@
 # Linky
 
+### file dump from local
+
 Linky is a lightweight and easy-to-use phishing link detector built for quick and efficient URL safety checks. It helps users identify potentially malicious or suspicious links before clicking on them.
 
 ## Features
